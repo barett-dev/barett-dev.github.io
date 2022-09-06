@@ -1,8 +1,3 @@
-/*  body{
-    background-image: url(images/airplane_sky.png);
-    background-size: cover; 
-} */
-
 *{
     margin: 0;
     padding: 0;
@@ -12,10 +7,13 @@
 
 html{
     font-size: 60.5%;
+    background: #DE3163;
 }
     /* GRID Y FLEXBOX PARA LAS CARTAS (SE USO GRID PARA CREAR LAYOUT DE LAS CARTAS
     Y FLEXBOX PARA ACOMODAR EL CONTENIDO DENTRO DE LAS MISMA */
-
+.backg{
+    background: #f1ae04;
+} 
 .wlcm{
     font-size: 8rem;
     color: #353935;
@@ -34,7 +32,7 @@ html{
     /* grid-auto-rows: minmax(125px, auto); */
 }
 
-.container{
+.card_container{
     width: 100%;
     height: 100vh;
     /* background: #262626;
@@ -67,7 +65,7 @@ html{
     border-radius: 2.5rem 2.5rem 0 0;
     display: grid;
     place-items: center;
-    
+
 }
 
 /* .img_top{
@@ -167,7 +165,7 @@ html{
 
     /* Imagenes para el background de las tarjetas,
     al colocar el cursor del mouse cambia de imagen*/
-    
+
 .img1{
     background-image: url(images/paris_card.jpeg); 
     background-size: cover; 
@@ -209,7 +207,7 @@ html{
     background-image: url(images/disney.png); 
     background-position-x: 50%;
 }
-.img5:hover:hover{
+.img5:hover{
     opacity: 2;
     background-image: url(images/disney_suits.jpg);
 }
@@ -217,61 +215,94 @@ html{
     background-image:url(images/bahamas.jpeg); 
     background-position-x: left 50%;
 }
-.img6:hover:hover{
+.img6:hover{
     opacity: 2;
     background-image: url(images/bahamas_group.jpeg);
 }
-
-#form1{
-    background-color: rgba(128, 128, 128, 0.517);
-    margin: 10px;
+.concert_img1{
+    background-image: url(images/the_weeknd1.jpg); 
+    background-size: cover; 
+    background-position-x: left 54%;
 }
-#form1 label{
-    font-family: Helvetica;
-    display: block;
-    padding: 5px;
-}
-#form1 label input:focus{
-    border-radius: 5px;
+.concert_img1:hover{
+    opacity: 2;
+    background-image: url(images/the_weeknd2.jpg);
 }
 
-.foot {
-    display: flex;
-    text-align: center;
-    flex-direction: row;
-    gap: 0.5rem;
-    background:#FFC300
+.concert_img2{
+    background-image: url(images/ladygaga1.jpg); 
+    background-position-x: left 55%;
+}
+.concert_img2:hover:hover{
+    opacity: 2;
+    background-image: url(images/ladygaga2.webp);
 }
 
-/* CSS para hacer zoom al colocar el cursor  */
+.concert_img3{
+    background-image: url(images/lilbaby1.jpg); 
+    background-position-x: 35%;
+}
+.concert_img3:hover{
+    opacity: 2;
+    background-image: url(images/lilbaby2.jpeg);
+}
+
+.concert_img4{
+    background-image: url(images/tameimpala1.webp); 
+    background-position-x: left 70%;
+}
+.concert_img4:hover{
+    opacity: 2;
+    background-image: url(images/tameimpala2.webp);
+}
+
+.concert_img5{
+    background-image: url(images/flume1.jpg); 
+    background-position-x: 50%;
+}
+.concert_img5:hover{
+    opacity: 2;
+    background-image: url(images/flume2.webp);
+}
+.concert_img6{
+    background-image:url(images/paramore1.jpg); 
+    background-position-x: left 50%;
+}
+.concert_img6:hover{
+    opacity: 2;
+    background-image: url(images/paramore2.webp);
+}
 .zoom:hover {
     transform: scale(1.05);
 }
 .nav_zoom:hover a{
     transform: scale(1.05);
 }
-
-/* Menu de navegacion mejorado */
-
-.nav_container{
-    height: auto;
-    padding: 15px;
-    font-size: 2.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
-    border-top-left-radius: 2.5rem;
-    border-top-right-radius: 2.5rem;
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.9);
-    background: #DE3163;
+.profile_pic{
+    width: 120px;
+    height: 110px;
 }
-
-.nav_container a{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    text-shadow: 0 2rem 6rem rgba(0, 0, 0, 2);
-    color: aliceblue;
-    text-decoration: none;
-
+.container1{
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color:#40E0D0;
+    border-radius: 2rem;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.wrap{
+    background: #DE3163;
+    padding: 4rem;
+}
+.color_wrap{
+    background: #DE3163;
+    margin-bottom: 0rem !important;
+}
+.contact_wrap{
+    background: #DE3163;
+    padding: 12rem;
 }
