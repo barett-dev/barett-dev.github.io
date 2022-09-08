@@ -1,31 +1,33 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Quicksand, sans-serif;
+    /* box-sizing: border-box; */
+    font-family: sans-serif;
 }
 
 html{
     font-size: 60.5%;
-    background: #DE3163;
+    background: #e3e3e3;
 }
     /* GRID Y FLEXBOX PARA LAS CARTAS (SE USO GRID PARA CREAR LAYOUT DE LAS CARTAS
     Y FLEXBOX PARA ACOMODAR EL CONTENIDO DENTRO DE LAS MISMA */
 .backg{
     background: #f1ae04;
 } 
-.wlcm{
-    font-size: 8rem;
-    color: #353935;
-    background: #40E0D0;
+.wlcm p{
     display: flex;
-    justify-items: center;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 5rem;
+    color:#262626;
+    background: #00bdaa;
+    margin-bottom: 0;
 }
 .card_order{
     width: 100%;
     height: auto;
     display: grid;
-    background: #262626;
+    background: #323232;
     background-attachment: scroll;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -33,66 +35,35 @@ html{
 }
 
 .card_container{
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 700px;
     /* background: #262626;
     background-attachment: fixed; */
     display: grid;
     place-items: center;
 
 }
-.wrapper{
-    padding: 3rem;
-}
-
 .card{
     width: 30rem;
     height: 55rem;
-    /* background: #eee; */
-    /* background-image: url(../Nike_Cards/images/paris_card.jpeg); */
     background-size: cover;
-    border-radius: 2.5rem;
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.9);
-    /* position: relative; */
-    /* background-color: rgba(0,0,0,.5); */
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
 }
 
 .card_top{
     width: 100%;
     height: 50%;
-    /* background: #f1ae04 */;
     padding: 3rem;
-    border-radius: 2.5rem 2.5rem 0 0;
     display: grid;
     place-items: center;
-
-}
-
-/* .img_top{
-    width: 30rem;
-}
-
-.img_bottom{
-    width: 30rem;
-}  */
-
-.card_top_text{
-    display: flex;
-    flex-direction: column;
-    color: whitesmoke;
-    font-size: 1.5rem;
-    gap: 3rem;
-    text-shadow: 0 2rem 6rem rgba(0, 0, 0, 2);
-    align-content: flex-start;
 
 }
 
 .card_bottom{
     width: 100%;
     height: 50%;
-    /* background: #f1ae04 */;
+    background: #e3e3e3;
     padding: 3rem;
-    border-radius: 2.5rem 2.5rem 0 0;
     display: grid;
     place-items: center;
 
@@ -102,17 +73,13 @@ html{
     display: flex;
     flex-direction: column;
     color: #353935;
-    font-size: 3rem;
     gap: 3rem;
     text-shadow: 0 2rem 6rem rgba(0, 0, 0, 2);
     align-content: flex-start;
 }
-
-/* @media (max-width: 0px) {
-    .card_order{
-      background: #262626;
-    }
-  } */
+.description_text{
+    font-size: 4.5rem;
+}
 
   /* TAMAÑO DE PANTALLA DE UN TELEFONO */
 
@@ -144,12 +111,13 @@ html{
 .price{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 0.5rem;
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.9);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
     position: relative;
-    width: 20.5rem;
+    width: 22rem;
     height: 5.5rem;
-    background: #DE3163;
+    background:#00bdaa;
     border-radius: 1rem;
 }
 .price span{
@@ -158,7 +126,7 @@ html{
     color: whitesmoke;
     font-size: 1.5rem;
     gap: 3rem;
-    text-shadow: 0 2rem 6rem rgba(0, 0, 0, 2);
+    text-shadow: 0 1rem 3rem rgba(0, 0, 0, 1);
     align-content: flex-start;
     font-size: 4rem;
 }
@@ -167,7 +135,7 @@ html{
     al colocar el cursor del mouse cambia de imagen*/
 
 .img1{
-    background-image: url(images/paris_card.jpeg); 
+    background-image: url(images/paris.webp); 
     background-size: cover; 
     background-position-x: left 54%;
 }
@@ -179,8 +147,9 @@ html{
 .img2{
     background-image: url(images/lasvegas.png); 
     background-position-x: left 55%;
+    background-size: cover;
 }
-.img2:hover:hover{
+.img2:hover{
     opacity: 2;
     background-image: url(images/casino.jpg);
 }
@@ -188,15 +157,18 @@ html{
 .img3{
     background-image: url(images/roma.jpeg); 
     background-position-x: 35%;
+    background-size: cover;
 }
 .img3:hover{
     opacity: 2;
     background-image: url(images/pisa_tower.jpg);
+    background-size: cover;
 }
 
 .img4{
     background-image: url(images/hawaii.png); 
     background-position-x: left 70%;
+    background-size: cover;
 }
 .img4:hover{
     opacity: 2;
@@ -206,6 +178,7 @@ html{
 .img5{
     background-image: url(images/disney.png); 
     background-position-x: 50%;
+    background-size: cover;
 }
 .img5:hover{
     opacity: 2;
@@ -214,6 +187,7 @@ html{
 .img6{
     background-image:url(images/bahamas.jpeg); 
     background-position-x: left 50%;
+    background-size: cover;
 }
 .img6:hover{
     opacity: 2;
@@ -221,7 +195,7 @@ html{
 }
 .concert_img1{
     background-image: url(images/the_weeknd1.jpg); 
-    background-size: cover; 
+    background-size:cover; 
     background-position-x: left 54%;
 }
 .concert_img1:hover{
@@ -232,6 +206,7 @@ html{
 .concert_img2{
     background-image: url(images/ladygaga1.jpg); 
     background-position-x: left 55%;
+    background-size: cover;
 }
 .concert_img2:hover:hover{
     opacity: 2;
@@ -241,6 +216,7 @@ html{
 .concert_img3{
     background-image: url(images/lilbaby1.jpg); 
     background-position-x: 35%;
+    background-size: cover;
 }
 .concert_img3:hover{
     opacity: 2;
@@ -248,8 +224,9 @@ html{
 }
 
 .concert_img4{
-    background-image: url(images/tameimpala1.webp); 
-    background-position-x: left 70%;
+    background-image: url(images/tameimpala1.jpeg); 
+    background-position-x: left 40%;
+    background-size: cover;
 }
 .concert_img4:hover{
     opacity: 2;
@@ -259,19 +236,22 @@ html{
 .concert_img5{
     background-image: url(images/flume1.jpg); 
     background-position-x: 50%;
+    background-size: cover;
 }
 .concert_img5:hover{
     opacity: 2;
     background-image: url(images/flume2.webp);
 }
 .concert_img6{
-    background-image:url(images/paramore1.jpg); 
+    background-image:url(images/paramore1.jpeg); 
     background-position-x: left 50%;
+    background-size: cover;
 }
 .concert_img6:hover{
     opacity: 2;
     background-image: url(images/paramore2.webp);
 }
+/* Zoom al poner el cursor */
 .zoom:hover {
     transform: scale(1.05);
 }
@@ -279,30 +259,75 @@ html{
     transform: scale(1.05);
 }
 .profile_pic{
-    width: 120px;
-    height: 110px;
+    width: 160px;
+    height: 160px;
 }
+/* CSS para la pagina de la informacion personal */
 .container1{
     width: 100%;
     height: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    background-color:#40E0D0;
+    background-color:#ff9a3c;
     border-radius: 2rem;
     padding-top: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
 }
 .wrap{
-    background: #DE3163;
+    background: #155263;
     padding: 4rem;
 }
 .color_wrap{
-    background: #DE3163;
+    background: #155263;
     margin-bottom: 0rem !important;
 }
 .contact_wrap{
-    background: #DE3163;
+    background: #155263;
     padding: 12rem;
+}
+.text_style_personal_info h3{
+    font-size: 5rem;
+}
+.text_style_personal_info p{
+    font-size: 3rem;
+}
+.text_style_booking_info th{
+    font-size: 5rem;
+}
+.text_style_booking_info td{
+    font-size: 3rem;
+}
+
+.text_style_nav_bar a{
+    font-size: 2.5rem;
+}
+.sign_up_container{
+    width: 800px;
+    height: 850px;
+}
+/* Css para la pagina de contacto */
+.text_style label{
+    font-size: 3rem;
+}
+.text_style div{
+    font-size: 2.5rem;
+}
+.text_style h1{
+    font-size: 4.5rem;
+}
+.text_style p{
+    font-size: 4rem;
+}
+.text_style button{
+    font-size: 2rem;
+}
+/* Css para el footer */
+.foot {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    background:#FFC300
 }
