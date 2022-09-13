@@ -1,0 +1,134 @@
+/* Color de fondo para las tarjetas del menu principal */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+html {
+  font-size: 60.5%; }
+
+main .wlcm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 5rem;
+  color: #262626;
+  background: #00bdaa;
+  margin-bottom: 0; }
+
+main .card_order {
+  width: 100%;
+  height: auto;
+  display: grid;
+  background: #323232;
+  background-attachment: scroll;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+
+main .card_container {
+  width: 90%;
+  height: 700px;
+  display: grid;
+  place-items: center; }
+
+main .card {
+  width: 30rem;
+  height: 55rem;
+  background-size: cover;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9); }
+  main .card:hover {
+    transform: scale(1.05); }
+
+main .card_top {
+  width: 100%;
+  height: 50%;
+  padding: 3rem;
+  display: grid;
+  place-items: center; }
+
+main .img1 {
+  background-image: url(../images/paris.webp);
+  background-size: cover;
+  background-position-x: left 54%; }
+  main .img1:hover {
+    opacity: 2;
+    background-image: url(../images/paris_couple.jpg); }
+
+main .img2 {
+  background-image: url(../images/lasvegas.png);
+  background-size: cover;
+  background-position-x: left 55%; }
+  main .img2:hover {
+    opacity: 2;
+    background-image: url(../images/casino.jpg); }
+
+main .img3 {
+  background-image: url(../images/roma.jpeg);
+  background-size: cover;
+  background-position-x: left 35%; }
+  main .img3:hover {
+    opacity: 2;
+    background-image: url(../images/pisa_tower.jpg); }
+
+main .img4 {
+  background-image: url(../images/hawaii.png);
+  background-size: cover;
+  background-position-x: left 70%; }
+  main .img4:hover {
+    opacity: 2;
+    background-image: url(../images/hawaii_beach.jpg); }
+
+main .img5 {
+  background-image: url(../images/disney.png);
+  background-size: cover;
+  background-position-x: left 50%; }
+  main .img5:hover {
+    opacity: 2;
+    background-image: url(../images/disney_suits.jpg); }
+
+main .img6 {
+  background-image: url(../images/bahamas.jpeg);
+  background-size: cover;
+  background-position-x: left 50%; }
+  main .img6:hover {
+    opacity: 2;
+    background-image: url(../images/bahamas_group.jpeg); }
+
+main .card_bottom {
+  width: 100%;
+  height: 50%;
+  background: #e3e3e3;
+  padding: 3rem;
+  display: grid;
+  place-items: center; }
+
+main .description_text {
+  font-size: 4.5rem; }
+
+main .stars i {
+  flex-basis: 3rem;
+  font-size: 2rem;
+  color: #FFC300; }
+  main .stars i:last-child {
+    opacity: 0.7; }
+
+main .price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
+  position: relative;
+  width: 22rem;
+  height: 5.5rem;
+  background: #00bdaa;
+  border-radius: 1rem; }
+  main .price span {
+    display: flex;
+    flex-direction: column;
+    color: #e3e3e3;
+    font-size: 1.5rem;
+    gap: 3rem;
+    text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
+    align-content: flex-start;
+    font-size: 4rem; }
