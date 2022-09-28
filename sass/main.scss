@@ -1,3 +1,17 @@
+@mixin card_size($height,$width){
+    height: $height;
+    width: $width;
+}
+@mixin child_position($position){
+    display: flex;
+    justify-content: $position;
+}
+@mixin phone($size){
+    @media screen and (max-width: $size) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,43 +20,127 @@
 html{
     font-size: 60.5%;
 }
+header{
+    .logo{
+        display: flex;
+        justify-content: center;
+        background: map-get($bground_color, 5);
+    }
+    .nav_container{
+        display: flex;
+        flex-direction: row;
+        white-space: 0;
+        justify-content: center;
+        background: map-get($bground_color, 4);
+    }
+    .item_container{
+        display: block;
+        border: 1rem;
+        font-size: 5rem;
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
 main{
+    .passport_container{
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        @include phone(1200px)
+
+    }
+
+    .airport_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 2rem;
+        background: map-get($bground_color, 5);
+    }
+    .book_departure{
+        margin: 1rem;
+        p{
+            font-size: 3rem;
+            &:first-child{
+                @include child_position(center)
+            }
+            &:last-child{
+                @include child_position(center)
+            }
+
+        }
+    }
+    .book_destiny{
+        p{
+            font-size: 3rem;
+            &:first-child{
+                display: flex;
+                justify-content: center;
+            }
+            &:last-child{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .book_history{
+        background: map-get($bground_color, 5);
+        padding: 2rem;
+    }
+    .thead_text{
+        font-size: 3.5rem;
+    }
+    .tbody_text{
+        font-size: 3rem;
+        td{
+            &:first-child{
+                @include child_position(center)
+            }
+            &:last-child{
+                @include child_position(center)
+            }
+        }
+    }
+    .zoom{
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
     .wlcm{
         display: flex;
         flex-direction: row;
         justify-content: center;
         font-size: 5rem;
         color: $text_color;
-        background: $text_bgd;
+        background: map-get($bground_color, 1);
         margin-bottom: 0;
     }
     .card_order{
-        width: 100%;
-        height: auto;
+        @include card_size(auto, 100%);
+        @include phone(1200px);
         display: grid;
-        background: $card_bgd;
+        background: map-get($bground_color, 2);
         background-attachment: scroll;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+
     }
     .card_container{
-        width: 90%;
-        height: 700px;
+        @include card_size(700px, 90%);
         display: grid;
         place-items: center;
     }
     .card{
-        width: 30rem;
-        height: 55rem;
+        @include card_size(55rem, 30rem);
         background-size: cover;
         box-shadow: $shadow;
-        &:hover{
-            transform: scale(1.05);
-        }
+        @extend .zoom
     }
     .card_top{
-        width: 100%;
-        height: 50%;
+        @include card_size(50%, 100%);
         padding: 3rem;
         display: grid;
         place-items: center;
@@ -101,10 +199,64 @@ main{
             background-image: url(../images/bahamas_group.jpeg);
         }
     }
+    .concert_img1{
+        background-image: url(../images/the_weeknd1.jpg); 
+        background-size:cover; 
+        background-position-x: left 54%;
+        &:hover{
+            opacity: 2;
+            background-image: url(../images/the_weeknd2.jpg);
+        }
+    }
+    .concert_img2{
+        background-image: url(../images/ladygaga1.jpg); 
+        background-position-x: left 55%;
+        background-size: cover;
+        &:hover{
+            opacity: 2;
+            background-image: url(../images/ladygaga2.webp);
+        }
+    }
+    .concert_img3{
+        background-image: url(../images/lilbaby1.jpg); 
+        background-position-x: 35%;
+        background-size: cover;
+        &:hover{
+            opacity: 2;
+            background-image: url(../images/lilbaby2.jpeg);
+        }
+    }
+    .concert_img4{
+        background-image: url(../images/tameimpala1.jpeg); 
+        background-position-x: left 40%;
+        background-size: cover;
+        &:hover{
+            opacity: 2;
+            background-image: url(../images/tameimpala2.webp);
+        }
+    }
+    .concert_img5{
+        background-image: url(../images/flume1.jpg); 
+        background-position-x: 50%;
+        background-size: cover;
+        &:hover{
+            opacity: 2;
+            background-image: url(../images/flume2.webp);
+        }
+    }
+    .concert_img6{
+        background-image:url(../images/paramore1.jpeg); 
+        background-position-x: left 50%;
+        background-size: cover;
+        &:hover{
+            opacity: 2;
+            background-image: url(../images/paramore2.webp);
+        }
+    }
     .card_bottom{
         width: 100%;
         height: 50%;
-        background: $card_text_bgd;
+        background: map-get($bground_color, 3);
         padding: 3rem;
         display: grid;
         place-items: center;
@@ -131,17 +283,87 @@ main{
         position: relative;
         width: 22rem;
         height: 5.5rem;
-        background:$text_bgd;
+        background:map-get($bground_color, 1);
         border-radius: 1rem;
         span{
             display: flex;
             flex-direction: column;
-            color: $card_text_bgd;
+            color: map-get($bground_color, 3);
             font-size: 1.5rem;
             gap: 3rem;
             text-shadow: $shadow;
             align-content: flex-start;
             font-size: 4rem;
         }
+    }
+    .profile_pic{
+        width: 160px;
+        height: 160px;
+    }
+    .container1{
+        width: 100%;
+        height: 70%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        background-color:#ff9a3c;
+        border-radius: 2rem;
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .wrap{
+        background: #155263;
+        padding: 4rem;
+    }
+    .color_wrap{
+        background: #155263;
+        margin-bottom: 0rem !important;
+    }
+    .contact_wrap{
+        background: #155263;
+        padding: 12rem;
+    }
+    .text_style_personal_info h3{
+        font-size: 5rem;
+    }
+    .text_style_personal_info p{
+        font-size: 3rem;
+    }
+    .text_style_booking_info th{
+        font-size: 5rem;
+    }
+    .text_style_booking_info td{
+        font-size: 3rem;
+    }
+    
+    .text_style_nav_bar a{
+        font-size: 2.5rem;
+    }
+    .sign_up_container{
+        width: 800px;
+        height: 850px;
+    }
+    .text_style label{
+        font-size: 3rem;
+    }
+    .text_style div{
+        font-size: 2.5rem;
+    }
+    .text_style h1{
+        font-size: 4.5rem;
+    }
+    .text_style p{
+        font-size: 4rem;
+    }
+    .text_style button{
+        font-size: 2rem;
+    }
+    .foot {
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        gap: 0.5rem;
+        background:#FFC300
     }
 }
