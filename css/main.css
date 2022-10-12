@@ -1,326 +1,284 @@
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  box-sizing: border-box; }
 
 html {
-  font-size: 60.5%; }
-
-header .logo {
-  display: flex;
-  justify-content: center;
+  font-size: 60%;
   background: #ffecd1; }
 
-header .nav_container {
-  display: flex;
-  flex-direction: row;
-  white-space: 0;
-  justify-content: center;
-  background: #ff7d00; }
+header {
+  /* CSS logo */
+  /* CSS navegation bar */ }
+  header .logo {
+    display: flex;
+    justify-content: center;
+    background: #ffecd1; }
+  header .nav_container {
+    display: flex;
+    flex-direction: row;
+    white-space: 0;
+    justify-content: center;
+    background: #ff7d00; }
+  header .item_container {
+    display: block;
+    border: 1rem;
+    font-size: 5rem;
+    padding: 1rem; }
+    header .item_container a {
+      text-decoration: none;
+      letter-spacing: 0.5rem;
+      color: black; }
 
-header .item_container {
-  display: block;
-  border: 1rem;
-  font-size: 5rem; }
-  header .item_container a {
-    text-decoration: none;
-    color: black; }
-
-main .passport_container {
-  width: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr; }
-  @media screen and (max-width: 1200px) {
-    main .passport_container {
-      grid-template-columns: repeat(1, 1fr); } }
-
-main .airport_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  padding: 2rem;
-  background: #ffecd1; }
-
-main .book_departure {
-  margin: 1rem; }
-  main .book_departure p {
+main {
+  /* CSS for card on home, hotels and concerts pages */
+  /* CSS for home pages images */
+  /* CSS for concerts page images */
+  /* CSS for hotels page images */
+  /* CSS for account page */
+  /* CSS for the foot */ }
+  main .zoom:hover, main .card:hover {
+    transform: scale(1.05); }
+  main .wlcm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 5rem;
+    color: #262626;
+    background: #15616d;
+    margin-bottom: 0; }
+  main .card_order {
+    height: auto;
+    width: 100%;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100vh;
+    gap: 2rem;
+    margin: 0 auto;
+    /* Using flexbox for the responsive */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 500px) {
+      main .card_order {
+        grid-template-columns: repeat(auto-fill);
+        /* hacer una media query */
+        grid-template-rows: repeat(auto-fill);
+        gap: 2rem; } }
+  main .card_container {
+    height: 700px;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    width: 90%;
+    max-width: 2400px;
+    flex-basis: 18rem; }
+  main .card {
+    height: 55rem;
+    width: 30rem;
+    background-size: cover;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
+    border-radius: 10px 50px; }
+  main .card_top {
+    height: 50%;
+    width: 100%;
+    padding: 3rem;
+    display: grid;
+    place-items: center; }
+  main .img1 {
+    background-image: url(../images/paris.webp);
+    background-size: cover;
+    background-position-x: left 54%; }
+    main .img1:hover {
+      opacity: 2;
+      background-image: url(../images/paris_couple.jpg); }
+  main .img2 {
+    background-image: url(../images/lasvegas.png);
+    background-size: cover;
+    background-position-x: left 55%; }
+    main .img2:hover {
+      opacity: 2;
+      background-image: url(../images/casino.jpg); }
+  main .img3 {
+    background-image: url(../images/roma.jpeg);
+    background-size: cover;
+    background-position-x: left 35%; }
+    main .img3:hover {
+      opacity: 2;
+      background-image: url(../images/pisa_tower.jpg); }
+  main .img4 {
+    background-image: url(../images/hawaii.png);
+    background-size: cover;
+    background-position-x: left 70%; }
+    main .img4:hover {
+      opacity: 2;
+      background-image: url(../images/hawaii_beach.jpg); }
+  main .img5 {
+    background-image: url(../images/disney.png);
+    background-size: cover;
+    background-position-x: left 50%; }
+    main .img5:hover {
+      opacity: 2;
+      background-image: url(../images/disney_suits.jpg); }
+  main .img6 {
+    background-image: url(../images/bahamas.jpeg);
+    background-size: cover;
+    background-position-x: left 50%; }
+    main .img6:hover {
+      opacity: 2;
+      background-image: url(../images/bahamas_group.jpeg); }
+  main .concert_img1 {
+    background-image: url(../images/the_weeknd1.jpg);
+    background-size: cover;
+    background-position-x: left 54%; }
+    main .concert_img1:hover {
+      opacity: 2;
+      background-image: url(../images/the_weeknd2.jpg); }
+  main .concert_img2 {
+    background-image: url(../images/ladygaga1.jpg);
+    background-position-x: left 55%;
+    background-size: cover; }
+    main .concert_img2:hover {
+      opacity: 2;
+      background-image: url(../images/ladygaga2.webp); }
+  main .concert_img3 {
+    background-image: url(../images/lilbaby1.jpg);
+    background-position-x: 35%;
+    background-size: cover; }
+    main .concert_img3:hover {
+      opacity: 2;
+      background-image: url(../images/lilbaby2.jpeg); }
+  main .concert_img4 {
+    background-image: url(../images/tameimpala1.jpeg);
+    background-position-x: left 40%;
+    background-size: cover; }
+    main .concert_img4:hover {
+      opacity: 2;
+      background-image: url(../images/tameimpala2.webp); }
+  main .concert_img5 {
+    background-image: url(../images/flume1.jpg);
+    background-position-x: 50%;
+    background-size: cover; }
+    main .concert_img5:hover {
+      opacity: 2;
+      background-image: url(../images/flume2.webp); }
+  main .concert_img6 {
+    background-image: url(../images/paramore1.jpeg);
+    background-position-x: left 50%;
+    background-size: cover; }
+    main .concert_img6:hover {
+      opacity: 2;
+      background-image: url(../images/paramore2.webp); }
+  main .hotel_img1 {
+    background-image: url(../images/hilton.jpg);
+    background-size: cover;
+    background-position-x: left 54%; }
+  main .hotel_img2 {
+    background-image: url(../images/plaza_hotel.jpg);
+    background-size: cover;
+    background-position-x: left 55%; }
+  main .hotel_img3 {
+    background-image: url(../images/eco_lodge.jpg);
+    background-size: cover;
+    background-position-x: left 35%; }
+  main .hotel_img4 {
+    background-image: url(../images/raffle_hotel.jpg);
+    background-size: cover;
+    background-position-x: left 70%; }
+  main .hotel_img5 {
+    background-image: url(../images/sheraton_hotel.jpg);
+    background-size: cover;
+    background-position-x: left 50%; }
+  main .hotel_img6 {
+    background-image: url(../images/kahala_hotel.jpg);
+    background-size: cover;
+    background-position-x: left 50%; }
+  main .card_bottom {
+    width: 100%;
+    height: 50%;
+    background: #ffecd1;
+    padding: 3rem;
+    display: grid;
+    place-items: center; }
+  main .description_text {
+    font-size: 4.5rem; }
+  main .stars i {
+    flex-basis: 3rem;
+    font-size: 2rem;
+    color: #FFC300; }
+    main .stars i:last-child {
+      opacity: 0.7; }
+  main .price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
+    position: relative;
+    width: 22rem;
+    height: 5.5rem;
+    background: #15616d;
+    border-radius: 1rem; }
+    main .price span {
+      display: flex;
+      flex-direction: column;
+      color: #e3e3e3;
+      font-size: 1.5rem;
+      gap: 3rem;
+      text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
+      align-content: flex-start;
+      font-size: 4rem; }
+  main .profile_pic {
+    width: 160px;
+    height: 160px; }
+  main .container1 {
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #ff9a3c;
+    border-radius: 2rem;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem; }
+  main .wrap {
+    background: #155263;
+    padding: 4rem; }
+  main .color_wrap {
+    background: #155263;
+    margin-bottom: 0rem !important; }
+  main .contact_wrap {
+    background: #155263;
+    padding: 12rem; }
+  main .text_style_personal_info h3 {
+    font-size: 5rem; }
+  main .text_style_personal_info p {
     font-size: 3rem; }
-    main .book_departure p:first-child {
-      display: flex;
-      justify-content: center; }
-    main .book_departure p:last-child {
-      display: flex;
-      justify-content: center; }
-
-main .book_destiny p {
-  font-size: 3rem; }
-  main .book_destiny p:first-child {
-    display: flex;
-    justify-content: center; }
-  main .book_destiny p:last-child {
-    display: flex;
-    justify-content: center; }
-
-main .book_history {
-  background: #ffecd1;
-  padding: 2rem; }
-
-main .thead_text {
-  font-size: 3.5rem; }
-
-main .tbody_text {
-  font-size: 3rem; }
-  main .tbody_text td:first-child {
-    display: flex;
-    justify-content: center; }
-  main .tbody_text td:last-child {
-    display: flex;
-    justify-content: center; }
-
-main .zoom:hover, main .card:hover {
-  transform: scale(1.05); }
-
-main .wlcm {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 5rem;
-  color: #262626;
-  background: #15616d;
-  margin-bottom: 0; }
-
-main .card_order {
-  height: auto;
-  width: 100%;
-  display: grid;
-  background: #001524;
-  background-attachment: scroll;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr; }
-  @media screen and (max-width: 1200px) {
-    main .card_order {
-      grid-template-columns: repeat(1, 1fr); } }
-
-main .card_container {
-  height: 700px;
-  width: 90%;
-  display: grid;
-  place-items: center; }
-
-main .card {
-  height: 55rem;
-  width: 30rem;
-  background-size: cover;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9); }
-
-main .card_top {
-  height: 50%;
-  width: 100%;
-  padding: 3rem;
-  display: grid;
-  place-items: center; }
-
-main .img1 {
-  background-image: url(../images/paris.webp);
-  background-size: cover;
-  background-position-x: left 54%; }
-  main .img1:hover {
-    opacity: 2;
-    background-image: url(../images/paris_couple.jpg); }
-
-main .img2 {
-  background-image: url(../images/lasvegas.png);
-  background-size: cover;
-  background-position-x: left 55%; }
-  main .img2:hover {
-    opacity: 2;
-    background-image: url(../images/casino.jpg); }
-
-main .img3 {
-  background-image: url(../images/roma.jpeg);
-  background-size: cover;
-  background-position-x: left 35%; }
-  main .img3:hover {
-    opacity: 2;
-    background-image: url(../images/pisa_tower.jpg); }
-
-main .img4 {
-  background-image: url(../images/hawaii.png);
-  background-size: cover;
-  background-position-x: left 70%; }
-  main .img4:hover {
-    opacity: 2;
-    background-image: url(../images/hawaii_beach.jpg); }
-
-main .img5 {
-  background-image: url(../images/disney.png);
-  background-size: cover;
-  background-position-x: left 50%; }
-  main .img5:hover {
-    opacity: 2;
-    background-image: url(../images/disney_suits.jpg); }
-
-main .img6 {
-  background-image: url(../images/bahamas.jpeg);
-  background-size: cover;
-  background-position-x: left 50%; }
-  main .img6:hover {
-    opacity: 2;
-    background-image: url(../images/bahamas_group.jpeg); }
-
-main .concert_img1 {
-  background-image: url(../images/the_weeknd1.jpg);
-  background-size: cover;
-  background-position-x: left 54%; }
-  main .concert_img1:hover {
-    opacity: 2;
-    background-image: url(../images/the_weeknd2.jpg); }
-
-main .concert_img2 {
-  background-image: url(../images/ladygaga1.jpg);
-  background-position-x: left 55%;
-  background-size: cover; }
-  main .concert_img2:hover {
-    opacity: 2;
-    background-image: url(../images/ladygaga2.webp); }
-
-main .concert_img3 {
-  background-image: url(../images/lilbaby1.jpg);
-  background-position-x: 35%;
-  background-size: cover; }
-  main .concert_img3:hover {
-    opacity: 2;
-    background-image: url(../images/lilbaby2.jpeg); }
-
-main .concert_img4 {
-  background-image: url(../images/tameimpala1.jpeg);
-  background-position-x: left 40%;
-  background-size: cover; }
-  main .concert_img4:hover {
-    opacity: 2;
-    background-image: url(../images/tameimpala2.webp); }
-
-main .concert_img5 {
-  background-image: url(../images/flume1.jpg);
-  background-position-x: 50%;
-  background-size: cover; }
-  main .concert_img5:hover {
-    opacity: 2;
-    background-image: url(../images/flume2.webp); }
-
-main .concert_img6 {
-  background-image: url(../images/paramore1.jpeg);
-  background-position-x: left 50%;
-  background-size: cover; }
-  main .concert_img6:hover {
-    opacity: 2;
-    background-image: url(../images/paramore2.webp); }
-
-main .card_bottom {
-  width: 100%;
-  height: 50%;
-  background: #e3e3e3;
-  padding: 3rem;
-  display: grid;
-  place-items: center; }
-
-main .description_text {
-  font-size: 4.5rem; }
-
-main .stars i {
-  flex-basis: 3rem;
-  font-size: 2rem;
-  color: #FFC300; }
-  main .stars i:last-child {
-    opacity: 0.7; }
-
-main .price {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 0.5rem;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
-  position: relative;
-  width: 22rem;
-  height: 5.5rem;
-  background: #15616d;
-  border-radius: 1rem; }
-  main .price span {
-    display: flex;
-    flex-direction: column;
-    color: #e3e3e3;
-    font-size: 1.5rem;
-    gap: 3rem;
-    text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
-    align-content: flex-start;
+  main .text_style_booking_info th {
+    font-size: 5rem; }
+  main .text_style_booking_info td {
+    font-size: 3rem; }
+  main .text_style_nav_bar a {
+    font-size: 2.5rem; }
+  main .sign_up_container {
+    width: 800px;
+    height: 850px; }
+  main .text_style label {
+    font-size: 3rem; }
+  main .text_style div {
+    font-size: 2.5rem; }
+  main .text_style h1 {
+    font-size: 4.5rem; }
+  main .text_style p {
     font-size: 4rem; }
-
-main .profile_pic {
-  width: 160px;
-  height: 160px; }
-
-main .container1 {
-  width: 100%;
-  height: 70%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  background-color: #ff9a3c;
-  border-radius: 2rem;
-  padding-top: 2rem;
-  padding-left: 3rem;
-  padding-right: 3rem; }
-
-main .wrap {
-  background: #155263;
-  padding: 4rem; }
-
-main .color_wrap {
-  background: #155263;
-  margin-bottom: 0rem !important; }
-
-main .contact_wrap {
-  background: #155263;
-  padding: 12rem; }
-
-main .text_style_personal_info h3 {
-  font-size: 5rem; }
-
-main .text_style_personal_info p {
-  font-size: 3rem; }
-
-main .text_style_booking_info th {
-  font-size: 5rem; }
-
-main .text_style_booking_info td {
-  font-size: 3rem; }
-
-main .text_style_nav_bar a {
-  font-size: 2.5rem; }
-
-main .sign_up_container {
-  width: 800px;
-  height: 850px; }
-
-main .text_style label {
-  font-size: 3rem; }
-
-main .text_style div {
-  font-size: 2.5rem; }
-
-main .text_style h1 {
-  font-size: 4.5rem; }
-
-main .text_style p {
-  font-size: 4rem; }
-
-main .text_style button {
-  font-size: 2rem; }
-
-main .foot {
-  display: flex;
-  text-align: center;
-  flex-direction: row;
-  gap: 0.5rem;
-  background: #FFC300; }
+  main .text_style button {
+    font-size: 2rem; }
+  main .foot {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    gap: 0.5rem;
+    background: #FFC300; }
